@@ -1,0 +1,28 @@
+<div class="jumbotron portfolio-hero text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Ryan Walton</h1>
+        <p>Product designer, occasional front-end developer, full-time family man. Live in SF, born in South Africa.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Resume</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Projects -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Projects</h2>
+    </div>
+    <!-- filters -->
+    <div class="col-sm-12">
+    </div>
+    <!-- projects -->
+    <div class="col-sm-12">
+      {{#each project}}
+        {{> project_card this}}
+      {{/each}}
+    </div>
+  </div>
+</div>
