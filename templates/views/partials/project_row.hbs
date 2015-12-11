@@ -7,37 +7,17 @@
     {{#each images}}
       {{#compare ../images.length 1 operator="=="}}
         <div class="col-sm-12">
-            <a class="img-lightbox" href="{{this.image.url}}">
-              <img class="" src="{{this.image.url}}" alt="" />
-            </a>
+            {{> img_lightbox }}
         </div>
       {{/compare}}
       {{#compare ../images.length 2 operator="=="}}
         <div class="col-sm-6">
-            <a class="img-lightbox" href="{{this.image.url}}">
-              <img class="" src="{{this.image.url}}" alt="" />
-            </a>
+            {{> img_lightbox }}
         </div>
       {{/compare}}
-      {{#compare ../images.length 3 operator="=="}}
+      {{#compare ../images.length 3 operator=">="}}
         <div class="col-sm-4">
-            <a class="img-lightbox" href="{{this.image.url}}">
-              <img class="" src="{{this.image.url}}" alt="" />
-            </a>
-        </div>
-      {{/compare}}
-      {{#compare ../images.length 4 operator="=="}}
-        <div class="col-sm-3">
-            <a class="img-lightbox" href="{{this.image.url}}">
-              <img class="" src="{{this.image.url}}" alt="" />
-            </a>
-        </div>
-      {{/compare}}
-      {{#compare ../images.length 4 operator=">"}}
-        <div class="col-sm-4">
-            <a class="img-lightbox" href="{{this.image.url}}">
-              <img class="" src="{{this.image.url}}" alt="" />
-            </a>
+            {{> img_lightbox }}
         </div>
       {{/compare}}
     {{/each}}
