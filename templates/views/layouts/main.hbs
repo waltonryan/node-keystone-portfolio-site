@@ -7,10 +7,9 @@
 		<title>Ryan Walton | Portfolio</title>
 		<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/library/magnific-popup-master/dist/magnific-popup.css">
 		<link href="/styles/site.css" rel="stylesheet">
 
-		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-		//- Safely remove this block if you are not targeting IE8 --}}
 		<!--[if lt IE 9]>
 			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
 			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
@@ -24,6 +23,32 @@
 
 		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
 		<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+		<script src="/library/magnific-popup-master/dist/jquery.magnific-popup.js"></script>
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+
+		<script type="text/javascript">
+			// On document ready:
+			$(function(){
+				// Instantiate MixItUp:
+				$('#project-list').mixItUp({
+					load: {
+						sort: 'myorder:asc'
+					}
+				});
+				// animate scroll scrollspy
+				$('a[href^="#"]').click(function(){
+				    $('html, body').animate({
+				        scrollTop: $( $.attr(this, 'href') ).offset().top-50
+				    }, 500);
+				    return false;
+				});
+				// enable lightbox
+				$(document).ready(function() {
+				  $('.img-lightbox').magnificPopup({type:'image'});
+				});
+
+			});
+		</script>
+
 	</body>
 </html>

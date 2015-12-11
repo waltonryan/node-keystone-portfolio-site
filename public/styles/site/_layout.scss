@@ -1,3 +1,7 @@
+body {
+	padding-bottom: 100px;
+}
+
 #header {
 	margin-top: 30px;
 }
@@ -10,8 +14,48 @@
 }
 
 .top-gap {
-	margin-top: 50px;
+	margin-top: 150px;
 }
+
+.about-details {
+	margin-top: 30px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: transparent;
+}
+
+.img-lightbox img {
+	padding-bottom: 15px;
+}
+
+// .btn {
+//     padding: 10px 20px 10px 20px;
+//     -webkit-border-radius: 20px;
+//     -moz-border-radius: 20px;
+//     border-radius: 20px;
+//     cursor: pointer;
+//     background-color: #fff;
+//     border: solid 1px #eee;
+//     margin: 5px;
+// }
+// .btn:hover {
+//     color: #fff;
+//     background-color: #58585A;
+//     border: solid 1px #58585A;
+// }
+
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: pointer;
+}
+
+// .static-nav {
+// 	background-color: gray;
+// }
+
+// .top-gap {
+// 	margin-top: 50px;
+// }
 
 .gallery-image img{
     display: block;

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row project-header">
+    <div class="col-sm-6">
+      <h2>{{this.title}}</h2>
+      <p>{{this.description}}</p>
+    </div>
+    <div class="col-sm-6">
+      {{#if this.video}}
+        <div class="video-container">
+          <iframe src="{{this.video.videoId}}" frameborder="0" width="560" height="315" allowfullscreen></iframe>
+        </div>
+      {{else}}
+        {{#each this.images}}
+          <a class="img-lightbox" href="{{this.image.url}}">
+              <img class="" src="{{this.image.url}}" alt="" />
+          </a>
+        {{/each}}
+      {{/if}}
+    </div>
+  </div>
+</div>

@@ -1,15 +1,14 @@
-<div class="container top-gap">
-  <div class="row">
-    <div class="col-sm-12">
-      <p>
-        project page
-        HERE:
-      </p>
-      <ul>
-        {{#each projectitem}}
-          <li>{{this.title}} {{this.project}}</li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-</div>
+<!-- Header Item -->
+{{#each projectitem}}
+    {{#if @first}}
+        {{> project_header this}}
+    {{/if}}
+{{/each}}
+<!-- Project Navbar -->
+{{> project_navbar projectitem}}
+<!-- Remaining Items -->
+{{#each projectitem}}
+    {{#if @first}}{{else}}
+        {{> project_row this}}
+    {{/if}}
+{{/each}}

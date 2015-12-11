@@ -1,4 +1,19 @@
-<div class="">
-  {{this.title}}
-  <a href="project/{{this._id}}">{{this.title}}</a>
+<div class="card project-list-hover mix {{#each this.category}}{{this.slug}} {{/each}} col-md-4 col-sm-6 col-xs-12" data-myorder="{{this.priority}}">
+  <div class="hovereffect">
+    <div class="img" style="
+      background: url({{this.thumbnailImage.image.url}}) no-repeat center top;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+    ">
+    </div>
+    <a href="project/{{this._id}}">
+      <div class="overlay">
+				<h4>{{this.title}}</h4>
+				<p>{{this.snippet}}</p>
+			</div>
+    </a>
+  </div>
 </div>

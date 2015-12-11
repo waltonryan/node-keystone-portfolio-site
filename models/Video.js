@@ -12,5 +12,5 @@ Video.add({
     videoId: { type: String},
 });
 
-Video.defaultColumns = 'title'
+Video.defaultColumns = 'title, slug'
 Video.register();

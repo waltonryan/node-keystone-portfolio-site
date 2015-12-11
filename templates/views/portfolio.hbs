@@ -4,7 +4,7 @@
       <div class="col-sm-12">
         <h1>Ryan Walton</h1>
         <p>Product designer, occasional front-end developer, full-time family man. Live in SF, born in South Africa.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Download Resume</a></p>
+        <p><a class="btn btn-default btn-lg" href="mailto:ryan.s.walton@gmail.com?Subject=Hello%20Ryan">Contact</a></p>
       </div>
     </div>
   </div>
@@ -16,13 +16,23 @@
       <h2>Projects</h2>
     </div>
     <!-- filters -->
-    <div class="col-sm-12">
+    <div class="col-sm-12 text-center project-list-controls">
+      <ul class="list-inline">
+        <li class="filter" data-filter="all">Show All</li>
+        <li class="filter" data-filter=".ux-design">UX</li>
+        <li class="filter" data-filter=".interaction-design">Interaction</li>
+        <li class="filter" data-filter=".visual-design">Visual</li>
+        <li class="filter" data-filter=".identity-design">Identity Work</li>
+        <li class="filter" data-filter=".ios-design">iOS Design</li>
+      </ul>
     </div>
     <!-- projects -->
     <div class="col-sm-12">
-      {{#each project}}
-        {{> project_card this}}
-      {{/each}}
+      <div id="project-list" class="row">
+        {{#each project}}
+          {{> project_card this}}
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>

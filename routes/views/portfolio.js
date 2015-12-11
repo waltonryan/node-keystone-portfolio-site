@@ -1,4 +1,5 @@
 var keystone = require('keystone'),
+		HomePage = keystone.list('HomePage'),
 		Project = keystone.list('Project');
 
 exports = module.exports = function(req, res) {
@@ -10,6 +11,6 @@ exports = module.exports = function(req, res) {
 		if (err) throw err;
 		// all the things
 		res.render('portfolio', {layout: 'main', project: project});
-	}).populate('category');
-	
+	}).sort('priority').populate('category thumbnailImage');
+
 };

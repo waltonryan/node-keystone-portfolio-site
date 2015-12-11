@@ -12,5 +12,5 @@ Image.add({
     image: { type: Types.S3File },
 });
 
-Image.defaultColumns = 'title'
+Image.defaultColumns = 'title, slug'
 Image.register();

@@ -1,0 +1,13 @@
+<div class="container hidden-xxs">
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="nav nav-pills pull-right">
+        {{#each this}}
+          {{#if this.stage}}
+            <li role="presentation"><a href="#{{this.slug}}">{{this.stage.title}}</a></li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

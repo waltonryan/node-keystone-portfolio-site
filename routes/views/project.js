@@ -10,12 +10,12 @@ exports = module.exports = function(req, res) {
 	ProjectItem.model
 	.find()
 	.sort('priority')
-	.populate( 'project' )
+	.populate( 'project video images stage' )
 	.find({ project: { $eq: ObjectId(req.params.id) } }, function(err, projectitem) {
 		if (err) throw err;
 		console.log(projectitem);
 		// all the things
 		res.render('project', {layout: 'main', projectitem: projectitem});
-	}).populate('video image');
+	});
 
 };
