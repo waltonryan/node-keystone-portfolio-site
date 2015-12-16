@@ -1,15 +1,15 @@
 var keystone = require('keystone'),
     Types = keystone.Field.Types;
 
-var Category = new keystone.List('Category', {
+var ProjectCategory = new keystone.List('ProjectCategory', {
     autokey: { path: 'slug', from: 'title', unique: true },
     map: { name: 'title' },
     defaultSort: 'title'
 });
 
-Category.add({
+ProjectCategory.add({
     title: { type: String, required: true },
 });
 
-Category.defaultColumns = 'title, slug|20%'
-Category.register();
+ProjectCategory.defaultColumns = 'title, slug|20%'
+ProjectCategory.register();

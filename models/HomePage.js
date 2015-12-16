@@ -10,8 +10,12 @@ var HomePage = new keystone.List('HomePage', {
 
 HomePage.add({
     title: { type: String, required: true },
+    email: { type: Types.Email },
+    role: { type: String },
     description: { type: Types.Textarea },
-    image: { type: Types.Relationship, ref: 'Image'}
+    bio: { type: Types.Textarea },
+    mainImage: { type: Types.Relationship, ref: 'Image'},
+    profileImage: { type: Types.Relationship, ref: 'Image'}
 });
 
 HomePage.defaultColumns = 'title, slug, state|20%'

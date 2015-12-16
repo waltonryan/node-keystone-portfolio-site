@@ -15,7 +15,7 @@ ProjectItem.add({
     stage: { type: Types.Relationship, ref: 'Stage'},
     priority: { type: Types.Number },
     description: { type: Types.Textarea },
-    video: { type: Types.Relationship, ref: 'Video'},
+    videos: { type: Types.Relationship, ref: 'Video', many: true},
     images: { type: Types.Relationship, ref: 'Image', many: true},
 });
 

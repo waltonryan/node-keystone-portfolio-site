@@ -13,7 +13,7 @@ Project.add({
     state: { type: Types.Select, options: 'draft, published, archived', default: 'draft' },
     priority: { type: Types.Number },
     snippet: { type: Types.Textarea },
-    category: { type: Types.Relationship, ref: 'Category', many: true},
+    projectCategory: { type: Types.Relationship, ref: 'ProjectCategory', many: true},
     thumbnailImage: { type: Types.Relationship, ref: 'Image'}
 });
 

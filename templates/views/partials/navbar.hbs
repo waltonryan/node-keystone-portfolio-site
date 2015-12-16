@@ -8,13 +8,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Ryan Walton</a>
+      <a class="navbar-brand" href="/">
+        {{#each homepage}}
+          {{#if @first}}
+            {{this.title}}
+          {{/if}}
+        {{/each}}
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
+        {{#ifeq section 'projects'}}
+          <li><a href="#projects">Projects</a></li>
+        {{else}}
+          <li><a href="/">Projects</a></li>
+        {{/ifeq}}
         <li><a href="/about">About</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

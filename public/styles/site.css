@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,800italic,800,700italic,700,600italic,600,400italic);
+@import url(../library/magnific-popup-master/dist/magnific-popup.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5853,21 +5855,48 @@ body {
   max-width: 100%;
   height: auto; }
 
+body {
+  color: #454545;
+  font-family: open-sans, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility; }
+
+p {
+  color: #8D8D8D;
+  line-height: 25px; }
+
+h2 {
+  color: #262F32;
+  font-size: 28px;
+  font-weight: 400; }
+
+.jumbotron {
+  background-color: #fff; }
+
 .portfolio-hero {
   padding: 0px;
-  background: url(../images/home-3.jpg) no-repeat center top;
-  background-size: cover;
-  background-position: center top;
-  text-align: center;
-  background-attachment: fixed;
-  color: #fff; }
+  text-align: center; }
+  .portfolio-hero h1 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 300;
+    text-shadow: 0px 2px 4px #fff; }
+    .portfolio-hero h1 .strong {
+      font-weight: 600; }
+  .portfolio-hero p {
+    font-size: 18px;
+    text-shadow: 0px 2px 4px #fff; }
   .portfolio-hero .container {
     padding: 150px 0 100px 0; }
+  .portfolio-hero .call-to-action {
+    padding-top: 30px; }
 
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(255, 255, 255, 0.3); }
 
 #project-list .mix {
   display: none; }
@@ -6016,14 +6045,14 @@ body {
 .project-list-controls {
   text-align: center;
   font-size: 11px;
-  font-weight: bold; }
+  font-weight: 600; }
 
 .project-list-controls ul {
   display: inline-block;
   margin: 20px 0 20px 0; }
 
 .project-list-controls li {
-  color: #808080;
+  color: #8D8D8D;
   /*lighter color*/
   padding: 10px 20px 10px 20px;
   -webkit-border-radius: 20px;

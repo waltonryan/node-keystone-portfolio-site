@@ -1,15 +1,28 @@
 <div class="container top-gap">
   <div class="row">
-    <div class="col-sm-6">
-      <img class="img-responsive" src="{{about.0.image.image.url}}" alt="" />
-    </div>
-    <div class="col-sm-6 about-details">
-      <p>{{about.0.description}}</p>
-      <h3>Contact</h3>
-      <ul class="list-inline">
-        <li><strong>Email</strong></li>
-        <li><a href="mailto:{{about.0.email}}">{{about.0.email}}</a></li>
-      </ul>
-    </div>
+    {{#each homepage}}
+      {{#if @first}}
+        {{#if this.profileImage}}
+          <div class="col-sm-6">
+            <img class="img-responsive" src="{{this.profileImage.image.url}}" alt="" />
+          </div>
+        {{/if}}
+        <div class="col-sm-6 about-details">
+          {{#if this.title}}
+            <h2>{{this.title}}</h2>
+          {{/if}}
+          {{#if this.bio}}
+            <p>{{this.bio}}</p>
+          {{/if}}
+          {{#if this.email}}
+            <h2>Contact</h2>
+            <ul class="list-inline">
+              <li><i class="fa fa-envelope"></i></li>
+              <li><a href="mailto:{{this.email}}?Subject=Hello">{{this.email}}</a></li>
+            </ul>
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/each}}
   </div>
 </div>

@@ -14,12 +14,18 @@
 
 @import "site/variables";
 
+// Library Styles
+// ===========
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,800italic,800,700italic,700,600italic,600,400italic);
+
+@import "../library/magnific-popup-master/dist/magnific-popup.css";
 
 // Site Styles
 // ===========
 
-// Add your own site style includes here
 @import "site/layout";
+@import "site/typography";
 @import "site/portfolio";
 @import "site/card";
 @import "site/row";

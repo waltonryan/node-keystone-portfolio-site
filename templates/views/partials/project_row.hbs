@@ -4,6 +4,25 @@
       <h2>{{this.title}}</h2>
       <p>{{this.description}}</p>
     </div>
+
+    {{#each videos}}
+      {{#compare ../videos.length 1 operator="=="}}
+        <div class="col-sm-12">
+            {{> video }}
+        </div>
+      {{/compare}}
+      {{#compare ../videos.length 2 operator="=="}}
+        <div class="col-sm-6">
+            {{> video }}
+        </div>
+      {{/compare}}
+      {{#compare ../videos.length 3 operator=">="}}
+        <div class="col-sm-4">
+            {{> video }}
+        </div>
+      {{/compare}}
+    {{/each}}
+
     {{#each images}}
       {{#compare ../images.length 1 operator="=="}}
         <div class="col-sm-12">

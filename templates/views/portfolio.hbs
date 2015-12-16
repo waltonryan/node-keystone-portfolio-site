@@ -1,33 +1,49 @@
-<div class="jumbotron portfolio-hero text-center">
+<div class="jumbotron portfolio-hero text-center" style="
+    background: url(
+      {{#each homepage}}
+        {{#if @first}}
+          {{#if this.mainImage}}
+            {{this.mainImage.image.url}}
+          {{/if}}
+        {{/if}}
+      {{/each}}
+    ) no-repeat center bottom;
+    background-size: cover;
+    <!-- background-attachment: fixed; -->
+  ">
   <div class="overlay">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h1>Ryan Walton</h1>
-          <p>Product designer, occasional front-end developer, full-time family man. Live in SF, born in South Africa.</p>
-          <p><a class="btn btn-default btn-lg" href="mailto:ryan.s.walton@gmail.com?Subject=Hello%20Ryan">Contact</a></p>
+          <h1>
+            {{#each homepage}}
+              {{#if @first}}
+                {{this.title}}.
+                {{#if this.role}}
+                  <span class="strong">{{this.role}}</span>.
+                {{/if}}
+              {{/if}}
+              {{#if this.description}}
+                <p>{{this.description}}</p>
+              {{/if}}
+              {{#if this.email}}
+                <p class="call-to-action"><a class="btn btn-default btn-lg" href="mailto:{{this.email}}?Subject=Hello">Contact Me</a></p>
+              {{/if}}
+            {{/each}}
+          </h1>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- Projects -->
-<div class="container">
+<div class="container" id="projects">
   <div class="row">
     <div class="col-sm-12 text-center">
       <h2>Projects</h2>
     </div>
     <!-- filters -->
-    <div class="col-sm-12 text-center project-list-controls">
-      <ul class="list-inline">
-        <li class="filter" data-filter="all">All</li>
-        <li class="filter" data-filter=".ux-design">UX</li>
-        <li class="filter" data-filter=".interaction-design">Interaction</li>
-        <li class="filter" data-filter=".visual-design">Visual</li>
-        <li class="filter" data-filter=".identity-design">Identity Work</li>
-        <li class="filter" data-filter=".ios-design">iOS Design</li>
-      </ul>
-    </div>
+    {{> project_filters filters}}
     <!-- projects -->
     <div class="col-sm-12">
       <div id="project-list" class="row">

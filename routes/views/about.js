@@ -1,15 +1,26 @@
 var keystone = require('keystone'),
-		About = keystone.list('About');
+		HomePage = keystone.list('HomePage');
 
 exports = module.exports = function(req, res) {
 
 	var view = new keystone.View(req, res);
+	var locals = res.locals;
+
+	locals.section = 'about';
+
+	// Load homepage info
+	view.on('init', function (next) {
+
+		var q = HomePage.model.find({}).populate('profileImage');
+
+		q.exec(function (err, result) {
+			locals.homepage = result;
+			next(err);
+		});
+
+	});
 
 	// Render the view
-	About.model.find({}, function(err, about) {
-		if (err) throw err;
-		// all the things
-		res.render('about', {layout: 'main', about: about});
-	}).populate('image');
+	view.render('about', {layout: 'main'});
 
 };
