@@ -1,7 +1,8 @@
 var keystone = require('keystone'),
-		HomePage = keystone.list('HomePage'),
+		SiteInfo = keystone.list('SiteInfo'),
 		ProjectCategory = keystone.list('ProjectCategory'),
-		Project = keystone.list('Project');
+		Project = keystone.list('Project'),
+		Skill = keystone.list('Skill');
 
 exports = module.exports = function(req, res) {
 
@@ -10,13 +11,13 @@ exports = module.exports = function(req, res) {
 
 	locals.section = 'projects';
 
-	// Load homepage info
+	// Load SiteInfo info
 	view.on('init', function (next) {
 
-		var q = HomePage.model.find({}).populate('mainImage');
+		var q = SiteInfo.model.find({}).populate('mainImage profileImage');
 
 		q.exec(function (err, result) {
-			locals.homepage = result;
+			locals.siteinfo = result;
 			next(err);
 		});
 
@@ -46,17 +47,19 @@ exports = module.exports = function(req, res) {
 
 	});
 
+	// Load skills
+	view.on('init', function (next) {
+
+		var q = Skill.model.find({}).sort('priority').populate('image');
+
+		q.exec(function (err, result) {
+			locals.skills = result;
+			next(err);
+		});
+
+	});
+
 	// Render the view
 	view.render('portfolio', {layout: 'main'});
-
-
-
-
-	// // Render the view
-	// Project.model.find({}, function(err, project) {
-	// 	if (err) throw err;
-	// 	// all the things
-	// 	res.render('portfolio', {layout: 'main', project: project});
-	// }).sort('priority').populate('projectCategory thumbnailImage');
 
 };

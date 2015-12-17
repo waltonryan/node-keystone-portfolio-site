@@ -1,6 +1,6 @@
 <div class="container top-gap">
   <div class="row">
-    {{#each homepage}}
+    {{#each siteinfo}}
       {{#if @first}}
         {{#if this.profileImage}}
           <div class="col-sm-6">
@@ -14,11 +14,23 @@
           {{#if this.bio}}
             <p>{{this.bio}}</p>
           {{/if}}
+          <h2>Contact</h2>
           {{#if this.email}}
-            <h2>Contact</h2>
             <ul class="list-inline">
               <li><i class="fa fa-envelope"></i></li>
-              <li><a href="mailto:{{this.email}}?Subject=Hello">{{this.email}}</a></li>
+              <li><a href="mailto:{{this.email}}?Subject=Hello" target="_blank">{{this.email}}</a></li>
+            </ul>
+          {{/if}}
+          {{#if this.twitter}}
+            <ul class="list-inline">
+              <li><i class="fa fa-twitter"></i></li>
+              <li><a href="https://twitter.com/{{this.twitter}}" target="_blank">@{{this.twitter}}</a></li>
+            </ul>
+          {{/if}}
+          {{#if this.linkedIn}}
+            <ul class="list-inline">
+              <li><i class="fa fa-linkedin"></i></li>
+              <li><a href="{{this.linkedIn}}" target="_blank">{{this.title}}</a></li>
             </ul>
           {{/if}}
         </div>

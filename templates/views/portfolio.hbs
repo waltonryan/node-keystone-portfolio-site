@@ -1,13 +1,13 @@
 <div class="jumbotron portfolio-hero text-center" style="
     background: url(
-      {{#each homepage}}
+      {{#each siteinfo}}
         {{#if @first}}
           {{#if this.mainImage}}
             {{this.mainImage.image.url}}
           {{/if}}
         {{/if}}
       {{/each}}
-    ) no-repeat center bottom;
+    ) no-repeat center center;
     background-size: cover;
     <!-- background-attachment: fixed; -->
   ">
@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h1>
-            {{#each homepage}}
+            {{#each siteinfo}}
               {{#if @first}}
                 {{this.title}}.
                 {{#if this.role}}
@@ -37,20 +37,38 @@
   </div>
 </div>
 <!-- Projects -->
-<div class="container" id="projects">
-  <div class="row">
-    <div class="col-sm-12 text-center">
-      <h2>Projects</h2>
-    </div>
-    <!-- filters -->
-    {{> project_filters filters}}
-    <!-- projects -->
-    <div class="col-sm-12">
-      <div id="project-list" class="row">
-        {{#each project}}
-          {{> project_card this}}
-        {{/each}}
+{{#if project}}
+  <div class="container projects" id="projects">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Projects</h2>
+      </div>
+      <!-- filters -->
+      {{#if filters}}
+        {{> project_filters filters}}
+      {{/if}}
+      <!-- projects -->
+      <div class="col-sm-12">
+        <div id="project-list" class="row">
+          {{#each project}}
+            {{> project_card this}}
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{{/if}}
+<!-- Skills -->
+{{#if skills}}
+  <div class="container skills" id="skills">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Skills</h2>
+      </div>
+      <!-- skills -->
+      {{#each skills}}
+        {{> skill_col}}
+      {{/each}}
+    </div>
+  </div>
+{{/if}}

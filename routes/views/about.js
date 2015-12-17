@@ -1,5 +1,5 @@
 var keystone = require('keystone'),
-		HomePage = keystone.list('HomePage');
+		SiteInfo = keystone.list('SiteInfo');
 
 exports = module.exports = function(req, res) {
 
@@ -8,13 +8,13 @@ exports = module.exports = function(req, res) {
 
 	locals.section = 'about';
 
-	// Load homepage info
+	// Load siteinfo info
 	view.on('init', function (next) {
 
-		var q = HomePage.model.find({}).populate('profileImage');
+		var q = SiteInfo.model.find({}).populate('profileImage');
 
 		q.exec(function (err, result) {
-			locals.homepage = result;
+			locals.siteinfo = result;
 			next(err);
 		});
 
