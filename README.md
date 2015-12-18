@@ -25,31 +25,31 @@ This portfolio site uses the handlebars and grunt version of the `yo keystone` s
 
 All of the models to populate your portfolio are set up and ready for you to add content to. Here is a rough overview of how it's all structured.
 
-#### Project
+##### Project
 
 Each project is displayed in the projects section.
 
-#### Project Item
+##### Project Item
 
 Each project item is associated with a project and provides the details on the project details page.
 
-#### Images
+##### Images
 
 Where you add all your images (.png, .jpg, .svg). In the other models, you can associate these assets, such as with Projects and Project Items.
 
-#### Videos
+##### Videos
 
 You can add either YouTube or Vimeo url's here, which are then displayed appropriately when associated with another model. Similar to how Images work.
 
-#### Project Category
+##### Project Category
 
 Project Categories are used with projects. These categories are used to create the project filter in the projects section.
 
-#### Stage
+##### Stage
 
 Stages are used with project items. Stages create the navigable rows in the project details page.
 
-#### Site Info
+##### Site Info
 
 Create one of these, adding your personal information in the corresponding fields.
 
