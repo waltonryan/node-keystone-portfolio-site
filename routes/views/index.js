@@ -11,30 +11,6 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
-	// // Load projects
-	// view.on('init', function (next) {
-	//
-	// 	var q = Project.model.find({}).populate('category');
-	//
-	// 	q.exec(function (err, result) {
-	// 		locals.projects = result;
-	// 		next(err);
-	// 	});
-	//
-	// });
-	//
-	// // Load project items
-	// view.on('init', function (next) {
-	//
-	// 	var q = ProjectItem.model.find({}).populate('stage');
-	//
-	// 	q.exec(function (err, result) {
-	// 		locals.projectitems = result;
-	// 		next(err);
-	// 	});
-	//
-	// });
-
 	// Render the view
 	view.render('index');
 
