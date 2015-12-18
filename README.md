@@ -15,9 +15,9 @@ To install, clone this repository. Then create a `.env` file in root directory, 
     S3_KEY=[S3_KEY]
     S3_SECRET=[S3_SECRET]
 
-Again in the root directory, run `node keystone`
+Again in the root directory, run `node keystone`. You should then be up and running if you correctly installed all the dependencies.
 
-More detailed instructions can be found on the KeystoneJS [Getting Started](http://keystonejs.com/docs/getting-started/ "KeystoneJS Getting Started") guide.
+More detailed installation instructions can be found on the KeystoneJS [Getting Started](http://keystonejs.com/docs/getting-started/ "KeystoneJS Getting Started") guide.
 
 This portfolio site uses the handlebars and grunt version of the `yo keystone` starter app.
 
