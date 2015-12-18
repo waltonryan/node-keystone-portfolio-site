@@ -8,13 +8,12 @@ Demo at [ryanswalton.com](http://www.ryanswalton.com/ "Ryan Walton Portfolio Sit
 
 To install, clone this repository. Then create a `.env` file in root directory, adding the following environment variables:
 
-  COOKIE_SECRET=[SECRET_KEY]
+    COOKIE_SECRET=[SECRET_KEY] //
 
-  MONGOLAB_URI=[MongoDB_URI]
-
-  S3_BUCKET=[S3_BUCKET]
-  S3_KEY=[S3_KEY]
-  S3_SECRET=[S3_SECRET]
+    MONGOLAB_URI=[MONGODB_URI]
+    S3_BUCKET=[S3_BUCKET]
+    S3_KEY=[S3_KEY]
+    S3_SECRET=[S3_SECRET]
 
 More detailed instructions can be found on the KeystoneJS [Getting Started](http://keystonejs.com/docs/getting-started/ "KeystoneJS Getting Started") guide.
 
