@@ -26,7 +26,7 @@ exports = module.exports = function(req, res) {
 	// Load filters
 	view.on('init', function (next) {
 
-		var q = ProjectCategory.model.find({});
+		var q = ProjectCategory.model.find({}).sort('priority');
 
 		q.exec(function (err, result) {
 			locals.filters = result;
@@ -38,7 +38,7 @@ exports = module.exports = function(req, res) {
 	// Load projects
 	view.on('init', function (next) {
 
-		var q = Project.model.find({}).sort('priority').populate('projectCategory thumbnailImage');
+		var q = Project.model.find({  state: "published" }).sort('priority').populate('projectCategory thumbnailImage');
 
 		q.exec(function (err, result) {
 			locals.project = result;

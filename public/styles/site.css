@@ -5835,10 +5835,14 @@ body {
   padding-top: 30px;
   color: #777777; }
 
-.navbar-brand {
-  padding: 8px 15px; }
-  .navbar-brand .header-img {
-    max-height: 34px; }
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #e7e7e7; }
+  .navbar-default .navbar-brand {
+    padding: 8px 15px; }
+    .navbar-default .navbar-brand .header-img {
+      max-height: 34px;
+      padding-left: 3px; }
 
 .skills {
   margin-top: 20px;
@@ -5876,8 +5880,14 @@ p {
   color: #8D8D8D;
   line-height: 25px; }
 
+.lead {
+  font-size: 16px; }
+
+h1, h2, h3 {
+  color: #3f3f3f; }
+
 h2 {
-  color: #262F32;
+  color: #3f3f3f;
   font-size: 28px;
   font-weight: 400; }
 

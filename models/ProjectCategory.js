@@ -9,6 +9,7 @@ var ProjectCategory = new keystone.List('ProjectCategory', {
 
 ProjectCategory.add({
     title: { type: String, required: true },
+    priority: { type: Types.Number }
 });
 
 ProjectCategory.defaultColumns = 'title, slug|20%'

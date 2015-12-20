@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 	// Load siteinfo info
 	view.on('init', function (next) {
 
-		var q = SiteInfo.model.find({}).populate('profileImage');
+		var q = SiteInfo.model.find({}).populate('profileImage headerImage');
 
 		q.exec(function (err, result) {
 			locals.siteinfo = result;
