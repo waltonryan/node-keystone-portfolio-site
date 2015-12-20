@@ -9,11 +9,21 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        {{#each siteinfo}}
-          {{#if @first}}
-            {{this.title}}
-          {{/if}}
-        {{/each}}
+        {{#if siteinfo}}
+          {{#each siteinfo}}
+            {{#if @first}}
+                {{#if this.headerImage}}
+                  <img class="header-img img-responsive" src="{{this.headerImage.image.url}}" alt="{{this.title}} Portfolio" />
+                {{else}}
+                  {{this.title}}
+                {{/if}}
+            {{else}}
+              Portfolio
+            {{/if}}
+          {{/each}}
+        {{else}}
+        Portfolio
+        {{/if}}
       </a>
     </div>
 

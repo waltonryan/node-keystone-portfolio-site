@@ -16,6 +16,7 @@ SiteInfo.add({
     bio: { type: Types.Textarea },
     mainImage: { type: Types.Relationship, ref: 'Image'},
     profileImage: { type: Types.Relationship, ref: 'Image'},
+    headerImage: { type: Types.Relationship, ref: 'Image'},
     twitter: { type: String },
     linkedIn: { type: Types.Url }
 });
