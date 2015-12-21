@@ -46,8 +46,10 @@ body {
 	background-color: transparent;
 }
 
-.img-lightbox img {
-	padding-bottom: 15px;
+.project-row {
+	.img-lightbox img {
+		margin-bottom: 15px;
+	}
 }
 
 

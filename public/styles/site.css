@@ -5857,8 +5857,8 @@ body {
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent; }
 
-.img-lightbox img {
-  padding-bottom: 15px; }
+.project-row .img-lightbox img {
+  margin-bottom: 15px; }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: pointer; }
@@ -5890,6 +5890,10 @@ h2 {
   color: #3f3f3f;
   font-size: 28px;
   font-weight: 400; }
+
+.img-border {
+  border: 1px solid #eee;
+  border-radius: 3px; }
 
 .jumbotron {
   background-color: #fff; }
